@@ -18,7 +18,7 @@ import {
   ChevronRight
 } from "lucide-react";
 import { motion } from "motion/react";
-import logoUrl from "./assets/images/science_council_logo_1782260639243.jpg";
+import logoUrl from "./assets/images/science_council_logo_official_1782261394413.jpg";
 
 interface Milestone {
   name: string;
@@ -242,9 +242,13 @@ export default function App() {
             <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-[#76B095] via-[#2C5E43] to-[#1C3D2B] rounded-full"></div>
 
             {/* Round 1 Card */}
-            <div 
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
               onClick={() => setSelectedTimelineRound(selectedTimelineRound === 1 ? null : 1)}
-              className={`relative flex flex-col md:flex-row items-stretch mb-12 md:mb-16 md:even:flex-row-reverse group cursor-pointer transition-all duration-300 ${selectedTimelineRound === 1 ? "scale-102" : "opacity-95 hover:opacity-100"}`}
+              className={`relative flex flex-col md:flex-row items-stretch mb-12 md:mb-16 md:even:flex-row-reverse group cursor-pointer transition-all duration-300 ${selectedTimelineRound === 1 ? "scale-[1.02]" : "opacity-95 hover:opacity-100"}`}
             >
               {/* Date Column (Desktop: left/right matching) */}
               <div className="w-full md:w-1/2 pr-0 md:pr-12 md:group-even:pl-12 md:group-even:pr-0 flex justify-end md:group-even:justify-start items-center">
@@ -288,12 +292,16 @@ export default function App() {
                   </p>
                 </div>
               </div>
-            </div>
+            </motion.div>
 
             {/* Round 2 Card */}
-            <div 
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
               onClick={() => setSelectedTimelineRound(selectedTimelineRound === 2 ? null : 2)}
-              className={`relative flex flex-col md:flex-row-reverse items-stretch mb-12 md:mb-16 group cursor-pointer transition-all duration-300 ${selectedTimelineRound === 2 ? "scale-102" : "opacity-95 hover:opacity-100"}`}
+              className={`relative flex flex-col md:flex-row-reverse items-stretch mb-12 md:mb-16 group cursor-pointer transition-all duration-300 ${selectedTimelineRound === 2 ? "scale-[1.02]" : "opacity-95 hover:opacity-100"}`}
             >
               {/* Date Column (Desktop: left/right matching) */}
               <div className="w-full md:w-1/2 pl-0 md:pl-12 flex justify-start items-center">
@@ -333,19 +341,23 @@ export default function App() {
                     <Award className="w-4 h-4 text-[#76B095]" /> Evaluation Rubric
                   </h5>
                   <ul className="text-gray-600 text-sm space-y-1">
-                    <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-[#76B095]" /> Innovation & Quality (10 pts)</li>
-                    <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-[#76B095]" /> Practicality & Usability (10 pts)</li>
-                    <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-[#76B095]" /> Sustainability & Materials (10 pts)</li>
-                    <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-[#76B095]" /> Cost-Effectiveness (10 pts)</li>
+                    <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-[#76B095]" /> Innovation & Quality</li>
+                    <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-[#76B095]" /> Practicality & Usability</li>
+                    <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-[#76B095]" /> Sustainability & Materials</li>
+                    <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-[#76B095]" /> Cost-Effectiveness</li>
                   </ul>
                 </div>
               </div>
-            </div>
+            </motion.div>
 
             {/* Round 3 Card */}
-            <div 
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
               onClick={() => setSelectedTimelineRound(selectedTimelineRound === 3 ? null : 3)}
-              className={`relative flex flex-col md:flex-row items-stretch mb-12 md:mb-16 group cursor-pointer transition-all duration-300 ${selectedTimelineRound === 3 ? "scale-102" : "opacity-95 hover:opacity-100"}`}
+              className={`relative flex flex-col md:flex-row items-stretch mb-12 md:mb-16 group cursor-pointer transition-all duration-300 ${selectedTimelineRound === 3 ? "scale-[1.02]" : "opacity-95 hover:opacity-100"}`}
             >
               {/* Date Column (Desktop: left/right matching) */}
               <div className="w-full md:w-1/2 pr-0 md:pr-12 flex justify-end items-center">
@@ -385,18 +397,18 @@ export default function App() {
                     <Trophy className="w-4 h-4 text-[#76B095]" /> Glory & Recognition
                   </h5>
                   <p className="text-gray-600 text-sm">
-                    Finalist teams present in front of judges, peers, and academic leaders. Winning teams will receive official Science Council certification and trophies.
+                    Finalist teams present in front of teachers and peers. Winning teams will receive official Science Council certification and medals.
                   </p>
                 </div>
               </div>
-            </div>
+            </motion.div>
           </div>
         </section>
 
         {/* SECTION 2: Interactive Hub */}
-        <section id="interactive-hub" class="scroll-mt-24 border-t border-[#EAF2EE] pt-16">
+        <section id="interactive-hub" className="scroll-mt-24 border-t border-[#EAF2EE] pt-16">
           <div className="text-center mb-12">
-            <h3 class="text-[#2C5E43] font-bold text-3xl font-sans">Project Toolkit</h3>
+            <h3 className="text-[#2C5E43] font-bold text-3xl font-sans">Project Toolkit</h3>
             <p className="text-gray-500 mt-2">Tools designed to help you prepare your entry and estimate your scores.</p>
             <div className="w-16 h-1.5 bg-[#76B095] mx-auto mt-4 rounded-full"></div>
           </div>
@@ -583,13 +595,13 @@ export default function App() {
             <div>
               <h5 className="font-bold text-[#76B095] uppercase tracking-wider mb-3">Need Assistance?</h5>
               <p className="text-emerald-100/70 leading-relaxed mb-3">
-                Contact the Science Council teachers-in-charge or student leaders for guidelines.
+                Contact Dhiya (Student Leader) or the Science Council teachers-in-charge (Ms Nuris or Mr Silvaraj) for guidelines.
               </p>
               <a 
-                href="mailto:info@taylors.edu.my" 
+                href="mailto:kl3798@kl.student.tis.edu.my" 
                 className="inline-flex items-center gap-2 text-white bg-[#76B095]/20 hover:bg-[#76B095]/40 px-4 py-2 rounded-lg transition-all border border-[#76B095]/40"
               >
-                <Mail className="w-4 h-4" /> Reach Out
+                <Mail className="w-4 h-4" /> Contact Dhiya
               </a>
             </div>
           </div>
