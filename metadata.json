@@ -1,0 +1,6 @@
+{
+  "name": "Science Council Timeline",
+  "description": "An interactive timeline and project toolkit for the Science & Innovation Challenge at Taylor's International School KL.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
