@@ -18,7 +18,7 @@ import {
   ChevronRight
 } from "lucide-react";
 import { motion } from "motion/react";
-import logoUrl from "./assets/images/science_council_logo_official_1782261394413.jpg";
+import logoUrl from "./assets/images/science_council_logo_1782262205490.png";
 
 interface Milestone {
   name: string;
